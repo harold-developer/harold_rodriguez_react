@@ -1,0 +1,18 @@
+#root {
+  background-image: url("./assets/mr-robot.webp");
+  background-size: cover;
+  background-image: linear-gradient(90deg, rgb(80, 80, 80),  rgba(0, 20, 85, 0.5)), url("./assets/mr-robot.webp");
+  margin: 10px;
+  padding: 6rem;
+}
+.contenedor{
+  text-align: justify;
+  font-family: 'Times New Roman', Times, serif;
+  height: auto;
+  width:60%;
+  margin-left: 500px;
+  color:white
+} 
+.contenedor h1{
+  direction:rtl;
+}
