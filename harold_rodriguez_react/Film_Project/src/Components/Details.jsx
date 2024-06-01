@@ -7,7 +7,7 @@ function Details(props) {
           <b>Genero:</b> {props.gender}
         </p>
         <p>
-          <b>Distribuidor:</b> {props.distribution}
+          <b>Estado:</b> {props.status}
         </p>
     </div>
   );
