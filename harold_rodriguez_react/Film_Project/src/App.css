@@ -1,9 +1,15 @@
-.titulo{
+.title{
   text-align: center;
 }
+.container{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
 .card{
-  width: 350px;
-  height: 500px;
+  width: 250px;
+  height: 400px;
   background-color: beige; 
   border-radius: 20px;
   border-style: solid;
