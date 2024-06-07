@@ -1,16 +1,29 @@
 import './App.css';
-import React from 'react';
-import RickAndMortyCharacterCard from './Components/RickAndMortyCharacterCard';
+import React, {useState, useEffect} from 'react';
+import CharacterCard from './Components/CharacterCard';
 
 function App() {
+  const [charactersList, setCharactersList] = useState([]);
+  useEffect( () => {
+    fetch("https://rickandmortyapi.com/api/character/?page=1")
+      .then((response) => response.json())
+      .then((data) => {
+        setCharactersList(data.results);
+      });
+  }, []);
+  
   return (
-    <div>
-      <h1 className='title'>Personajes de Rick and Morty</h1>
+    <div className='wallpaper'>
+      <h2 className='title'></h2>
       <div className='container'>
-        <RickAndMortyCharacterCard id={1}/>
-        <RickAndMortyCharacterCard id={2}/>
-        <RickAndMortyCharacterCard id={3}/>
-        <RickAndMortyCharacterCard id={10}/>
+        {charactersList.length !== 0 && charactersList.map( (character) => (
+          <CharacterCard key={character.id}
+            title={character.name}
+            img={character.image}
+            gender={character.gender}
+            status={character.status}
+          />
+        ))}
       </div>
     </div>
   );
