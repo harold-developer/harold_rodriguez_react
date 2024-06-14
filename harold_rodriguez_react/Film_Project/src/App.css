@@ -1,21 +1,98 @@
-.wallpaper{
-  background-image: url("./assets/Universo.jpg");
+#root{
+  background-image: url("./assets/Fondo_Universo.jpeg");
+  background-size: contain;
+}
+.ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+  padding-top: 10px;
+}
+.ul:hover{
+  cursor: pointer;
+}
+.container_start{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.container_start h2{
+margin: 0%;
+}
+.container_start img{
+  width: 310px;
+  height: 310px;
+  border-radius: 100%;
+  margin: 10px;
+}
+.container_start h3{
+  margin: 0%;
+}
+.link{
+  color: white; 
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin: 10px;
+}
+.link:active{
+  color: coral;
 }
 .title{
   background-image: url("./assets/logo.png");
   background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 300px;
-  height: 70px;
-  padding: 1rem;
+  height: 100px;
   margin: auto;
 }
-.container{
+.container_form{
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+.input{
+  padding: 3px;
+  margin: 5px;
+  width: 130px;
+  border-radius: 5px;
+  border: 2px solid white;
+  background-color: transparent;
+  box-shadow: 0 0 10px coral, inset 0 0 10px coral;
+  color: white;
+}
+.input::placeholder{
+  color: white;
+}
+.select{
+  padding: 3px;
+  margin: 5px;
+  width: 140px;
+  border-radius: 5px;
+  border: 2px solid white; 
+  background-color: transparent;
+  box-shadow: 0 0 10px coral, inset 0 0 10px coral;
+  color: white;
+}
+.select:hover{
+  color: coral;
+  cursor: pointer;
+}
+.select option{
+  background-color:rgb(172, 207, 110);
+  color: white;
+}
+.select option:checked{
+  background-color: coral
+}
+.container_card{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   margin: 10px;
-  padding: 10px;
 }
 .card{
   width: 250px;
@@ -23,11 +100,13 @@
   background-image: url("./assets/Fondo_Tarjeta.jpg");
   background-size:contain;
   border-radius: 20px;
-  border-style: solid;
-  border-color: black;
+  border: 2px solid white;
   padding: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
+  font-size: large;
 }
 .card img{
   width: 100%;
@@ -37,11 +116,51 @@
   text-align: center;
   font-size: 20px;
 }
+.container_page{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
 .button{
-  margin-left: 28.5%;
-  margin-top: 10px;
   padding: 3px;
-  width: 100px;
+  margin: 5px;
+  width: 80px;
+  border-radius: 5px;
+  border: 2px solid white; 
+  background-color: transparent;
+  box-shadow: 0 0 10px gold;
+  color: white;
+}
+.button:hover{
+  color:burlywood;
+  cursor: pointer;
+}
+.container_card2{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+  padding: 10px;
+}
+.card2{
+  width: 250px;
+  height: 200px;
+  background-image: url("./assets/Fondo_Episodio2.png");
+  background-size: contain;
+  background-position: center;
   border-radius: 20px;
-  background-color:burlywood;
+  border: 2px solid white;
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+}
+.card2 h2{
+  text-align: center;
+  font-size: 20px;
 }

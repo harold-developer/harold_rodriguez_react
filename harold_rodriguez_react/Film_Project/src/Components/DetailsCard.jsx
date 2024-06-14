@@ -1,15 +1,14 @@
 import React from 'react';
 
-function Details(props) {
+function DetailsCard(props) {
   return (
     <div>
         <p>
           <b>Genero:</b> {props.gender}
-        </p>
-        <p>
+          <br></br>
           <b>Estado:</b> {props.status}
         </p>
     </div>
   );
 }
-export default Details;
+export default DetailsCard;
