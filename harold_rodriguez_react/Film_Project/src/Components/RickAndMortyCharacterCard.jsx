@@ -1,21 +1,25 @@
 import React, {useState, useEffect} from 'react';
-import CharacterCard from './components/CharacterCard';
+import CharacterCard from './CharacterCard';
 
 function RickAndMortyCharacterCard(props) {
 
-    const [character, setCharacter] = useState();
-    const rickAndMortyCharacterId = props.id;    
+  const [character, setCharacter] = useState(null);
+  const rickAndMortyCharacterId = props.id;    
+
+  useEffect( () => {
+    fetch("https://rickandmortyapi.com/api/character/"+rickAndMortyCharacterId)
+      .then((response) => response.json())
+      .then((data) => {
+        setCharacter(data)
+        console.log(data)
+      });
+  },[rickAndMortyCharacterId]);
   
-    useEffect( () => {
-      fetch("https://rickandmortyapi.com/api/character/"+rickAndMortyCharacterId)
-        .then((response) => response.json())
-        .then((result) => {
-          setCharacter(result)
-        });
-    },[rickAndMortyCharacterId]);
-    console.log(character)
-    
-    return (
+  const handleCharacterClick = () => {
+    setCharacter(character);
+  };
+  
+  return (
     <div>
       {character && (    
         <CharacterCard key={character.id}
@@ -23,9 +27,11 @@ function RickAndMortyCharacterCard(props) {
           img={character.image}
           gender={character.gender}
           status={character.status}
+          onClick={handleCharacterClick}
         />
       )}
+      <button onClick={() => setCharacter(null)}>Close</button>
     </div>
-    );
+  );
 }
 export default RickAndMortyCharacterCard;

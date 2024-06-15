@@ -1,5 +1,6 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, } from 'react-router-dom';
 import './App.css'; 
+import RickAndMortyCharacterCard from './Components/RickAndMortyCharacterCard'
 import HomePage from './Pages/HomePage';
 import CharacterPage from './Pages/CharacterPage';
 import EpisodesPage from './Pages/EpisodesPage';
@@ -25,7 +26,8 @@ function App() {
             <Route path="/" exact element={<HomePage/>} />
             <Route path="/characters" element={<CharacterPage/>} />
             <Route path="/episodes" element={<EpisodesPage/>} />
-            <Route element={<NotFoundPage/>} />
+            <Route path="/characters/:id" element={<RickAndMortyCharacterCard/>} />
+            <Route path="*" element={<NotFoundPage/>} />
           </Routes>
         </div>
       </div>

@@ -5,7 +5,7 @@ import DetailsCard from './DetailsCard';
 
 function CharacterCard(props) {
   return (
-    <div className='card'>
+    <div className='card' onClick={props.onClick}>
       <Title title={props.title}/>
       <Image url={props.img} />
       <DetailsCard

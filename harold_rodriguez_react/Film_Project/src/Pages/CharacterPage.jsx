@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import CharacterCard from '../Components/CharacterCard';
 
-function CharacterPage(props) {
+function CharacterPage() {
   
   const [pagina, setPagina] = useState(1)
   const [charactersList, setCharactersList] = useState([]);
-  const [info, setInfo] = useState({})
+  const [info, setInfo] = useState()
 
   useEffect( () => {
     fetch(`https://rickandmortyapi.com/api/character/?page=${pagina}`)
@@ -62,6 +62,7 @@ function CharacterPage(props) {
       .then((data) => {
         console.log(data)
         setCharactersList(data.results);
+        setInfo(data.info);
     })  
   };
 

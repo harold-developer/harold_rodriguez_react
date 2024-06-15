@@ -2,6 +2,7 @@
   background-image: url("./assets/Fondo_Universo.jpeg");
   background-size: contain;
 }
+/* Inicio estilos homePage */
 .ul{
   list-style: none;
   display: flex;
@@ -39,6 +40,7 @@ margin: 0%;
 .link:active{
   color: coral;
 }
+/* Estilos CharacterPage */
 .title{
   background-image: url("./assets/logo.png");
   background-size: contain;
@@ -137,6 +139,7 @@ margin: 0%;
   color:burlywood;
   cursor: pointer;
 }
+/* Estilos EpisodesPage */
 .container_card2{
   display: flex;
   flex-wrap: wrap;
