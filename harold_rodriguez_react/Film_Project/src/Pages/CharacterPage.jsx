@@ -69,8 +69,8 @@ function CharacterPage() {
   return (
     <div>
       <h2 className='title'></h2>
-      <form onSubmit={onSearch} className='container_form'>
-        <div>
+      <form onSubmit={onSearch} >
+        <div className='container_form'>
           <input className="input" value={nameFilter} onChange={(e) => 
             setNameFilter(e.target.value)} type="text" placeholder="Character Name"/>
           <select className="select" value={genderFilter} onChange={(e) => 

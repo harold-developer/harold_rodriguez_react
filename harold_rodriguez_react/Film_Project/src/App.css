@@ -1,4 +1,4 @@
-#root{
+body{
   background-image: url("./assets/Fondo_Universo.jpeg");
   background-size: contain;
 }
@@ -8,9 +8,12 @@
   display: flex;
   justify-content: space-evenly;
   font-weight: bold;
-  padding-top: 10px;
+  text-transform: uppercase;
 }
-.ul:hover{
+ul.ul{
+  padding-left: 0%;
+}
+ul:hover{
   cursor: pointer;
 }
 .container_start{
@@ -19,25 +22,21 @@
   align-items: center;
   color: white;
 }
-.container_start h2{
-margin: 0%;
-}
 .container_start img{
   width: 310px;
   height: 310px;
   border-radius: 100%;
   margin: 10px;
 }
-.container_start h3{
-  margin: 0%;
-}
 .link{
   color: white; 
   font-weight: bold;
-  padding-bottom: 10px;
-  margin: 10px;
+  font-size:small;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
 }
-.link:active{
+.link:hover{
   color: coral;
 }
 /* Estilos CharacterPage */
@@ -53,7 +52,7 @@ margin: 0%;
 .container_form{
   display: flex;
   justify-content: center;
-  padding-top: 10px;
+  padding: 10px;
 }
 .input{
   padding: 3px;
@@ -166,4 +165,9 @@ margin: 0%;
 .card2 h2{
   text-align: center;
   font-size: 20px;
+}
+@media (max-width: 700px){
+  .container_form{
+    display:flow-root;
+  }
 }
